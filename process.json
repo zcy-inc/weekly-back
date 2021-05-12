@@ -1,0 +1,28 @@
+{
+  "apps": [{
+    "name": "weekly",
+    "script": "./app/app.js",
+    "watch": false,
+    "args": "--web --port 4092",
+    "interpreter": "node",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production": {
+      "NODE_ENV": "production"
+    },
+    "log_date_format":"YYYY-MM-DD HH:mm Z",
+    "error_file" : "./logs/process/error_file.log",
+    "out_file": "./logs/process/out_file.log"
+  }],
+  "deploy" : {
+    "production" : {
+      "user" : "root",
+      "host" : ["ip"],
+      "ref"  : "origin/main",
+      "repo" : "git@github.com:ZcyZooTeam/weekly-back.git",
+      "path" : "/root/weekly/weekly-server/",
+      "post-deploy" : "npm install && npm run pro && npm run mail:pro"
+     }
+  }
+}
