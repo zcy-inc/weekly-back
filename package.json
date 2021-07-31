@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"pm2 start process.json --env development",
-    "pro":"pm2 start process.json --env production",
-    "mail:dev":"pm2 start process-job.json --env development",
-    "mail:pro":"pm2 start process-job.json --env production",
-    "reload":"pm2 reload all",
-    "stop":"pm2 kill"
+    "dev": "pm2 start process.json --env development",
+    "pro": "pm2 start process.json --env production",
+    "mail:dev": "pm2 start process-job.json --env development",
+    "mail:pro": "pm2 start process-job.json --env production",
+    "reload": "pm2 reload all",
+    "stop": "pm2 kill"
   },
   "keywords": [],
   "author": "",

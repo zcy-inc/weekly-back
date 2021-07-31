@@ -3,12 +3,17 @@ module.exports = {
   database: {
     // 本地数据库地址
     development: {
-      host: '10.201.78.8',
+      host: 'mysql',
       user: 'root',
       password: '1234qwer',
       database: 'weekly',
     },
     // 线上数据库地址
-    production: {},
+    production: {
+      host: 'mysql',
+      user: 'root',
+      password: '1234qwer',
+      database: 'weekly',
+    },
   },
 };
